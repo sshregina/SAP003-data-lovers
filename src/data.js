@@ -1,8 +1,28 @@
-// esta é uma função de exemplo
-// veja como agregamos a função ao objeto global window
+function getGender(gender) {
+  const results = RICKANDMORTY.results.filter( persona => persona.gender === gender );
+  return results;
+}
 
-const example = () => {
-  return "example";
+function getSpecies(species) {
+  const results = RICKANDMORTY.results.filter( persona => persona.species === species );
+  return results;
+}
+
+function getStatus(status) {
+  const results = RICKANDMORTY.results.filter( persona => persona.status === status );
+  return results;
+}
+
+// function name() {
+//   for (let i=0; i <= RICKANDMORTY.results.length; i++) {
+//     RICKANDMORTY.results[i].name;
+//     console.log(RICKANDMORTY.results[i].name);
+//   }
+// }
+
+window.data = {
+  getGender,
+  getSpecies,
+  getStatus
 };
 
-window.example = example;
