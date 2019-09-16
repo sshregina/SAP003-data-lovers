@@ -1,16 +1,17 @@
-function getGender(gender) {
-  const results = RICKANDMORTY.results.filter( persona => persona.gender === gender );
-  return results;
-}
+// function getGender(gender) {
+//   return RICKANDMORTY.results.filter( persona => persona.gender === gender ); 
+// }
 
-function getSpecies(species) {
-  const results = RICKANDMORTY.results.filter( persona => persona.species === species );
-  return results;
-}
+// function getSpecies(species) {
+//   return RICKANDMORTY.results.filter( persona => persona.species === species ); 
+// }
 
-function getStatus(status) {
-  const results = RICKANDMORTY.results.filter( persona => persona.status === status );
-  return results;
+// function getStatus(status) {
+//   return RICKANDMORTY.results.filter( persona => persona.status === status );
+// }
+
+function getValue (key, value) {
+  return RICKANDMORTY.results.filter( persona => persona[key] === value );
 }
 
 // function name() {
@@ -21,8 +22,6 @@ function getStatus(status) {
 // }
 
 window.data = {
-  getGender,
-  getSpecies,
-  getStatus
+  getValue
 };
 
