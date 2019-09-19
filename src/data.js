@@ -10,8 +10,12 @@
 //   return RICKANDMORTY.results.filter( persona => persona.status === status );
 // }
 
-function getValue (key, value) {
-  return RICKANDMORTY.results.filter( persona => persona[key] === value );
+// function getValue (arr, string) {
+//   return arr.filter( persona => persona.result.include(string));
+// }
+
+function getValue (arr, key, value) {
+  return arr.filter( persona => persona[key] === value );
 }
 
 // function name() {
