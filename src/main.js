@@ -9,6 +9,7 @@ document.getElementById("btn-status-dead").addEventListener("click", filterDead)
 document.getElementById("btn-status-unknown").addEventListener("click", filterStatusUnknown);
 document.getElementById("btn-specie-Human").addEventListener("click", filterSpecieHuman);
 document.getElementById("btn-specie-Alien").addEventListener("click", filterSpecieAlien);
+document.getElementById("btn- A-Z").addEventListener("click", filterNamesAZ)
 
 // Função para printar cards na tela
 function buildHtml(itens) {
@@ -61,3 +62,9 @@ function filterSpecieHuman() {
 function filterSpecieAlien() {
   buildHtml(window.data.getValue(data, "species", "Alien"));
 }
+
+function filterNamesAZ() {
+  buildHtml(window.data.getAllName(data, "name"));
+}
+
+console.log(filterNamesAZ);
