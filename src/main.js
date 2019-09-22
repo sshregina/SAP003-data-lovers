@@ -1,5 +1,8 @@
 const data = RICKANDMORTY.results;
 const tela = document.getElementById("lista");
+const input = document.getElementById("input-person")
+
+input.addEventListener("keyup",searchPersons)
 
 document.getElementById("btn-gender-fem").addEventListener("click", filterFemale);
 document.getElementById("btn-gender-male").addEventListener("click", filterMale);
@@ -11,7 +14,6 @@ document.getElementById("btn-specie-Human").addEventListener("click", filterSpec
 document.getElementById("btn-specie-Alien").addEventListener("click", filterSpecieAlien);
 document.getElementById("btn- A-Z").addEventListener("click", filterNamesAZ)
 
-// Função para printar cards na tela
 function buildHtml(itens) {
   let html = "";
   itens.forEach((item) => html += `
@@ -30,7 +32,12 @@ function buildHtml(itens) {
   tela.innerHTML = html;
 }
 
-// Funções para filtar dados que vão aparecer no click de cada botão
+function searchPersons (){
+  let search = input.valeu.toUpperCase();
+  let name = window.data.getPerson(data,search)
+  return buildHtml (name)
+}
+
 function filterFemale() {
   buildHtml(window.data.getValue(data, "gender", "Female"));
 }
@@ -63,8 +70,10 @@ function filterSpecieAlien() {
   buildHtml(window.data.getValue(data, "species", "Alien"));
 }
 
-function filterNamesAZ() {
-  buildHtml(window.data.getAllName(data, "name"));
+function allNameAtoZ() {
+  buildHtml(window.data.getAllName(data, "A-Z"));
 }
 
-console.log(filterNamesAZ);
+function allNameZtoA() {
+  buildHtml(window.data.getAllName(data, "Z-A"));
+}
