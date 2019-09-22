@@ -18,16 +18,23 @@ function buildHtml(itens) {
   let html = "";
   itens.forEach((item) => html += `
   <div class="card">
-    <img src="${item.image}">
-    <ul class="card__list">
-      <li>Nome: <strong>${item.name}</strong></li>
-      <li>Status: <strong>${item.status}</strong></li>
-      <li>Espécie: <strong>${item.species}</strong></li>
-      <li>Gênero: <strong>${item.gender}</strong></li>
-      <li>Origem: <strong>${item.origin.name}</strong></li>
-      <li>Localização: <strong>${item.location.name}</strong></li>
-    </ul>
-  </div>
+    <div class= "card-inner">
+      <div class= "card-front">
+      <img src="${item.image}">
+      <h3>Nome: ${item.image}</h3>
+    </div>
+      <div class="card-back">
+        <ul class="card__list">
+         <li>Nome: <strong>${item.name}</strong></li>
+         <li>Status: <strong>${item.status}</strong></li>
+         <li>Espécie: <strong>${item.species}</strong></li>
+         <li>Gênero: <strong>${item.gender}</strong></li>
+         <li>Origem: <strong>${item.origin.name}</strong></li>
+         <li>Localização: <strong>${item.location.name}</strong></li>
+         </ul>
+       </div>
+      </div>
+    </div>g
   `);
   tela.innerHTML = html;
 }
