@@ -4,7 +4,6 @@ const tela = document.getElementById("lista");
 const input = document.getElementById("input-persons");
 
 input.addEventListener("keyup", searchPersons);
-
 document.getElementById("btn-gender-fem").addEventListener("click", filterFemale);
 document.getElementById("btn-gender-male").addEventListener("click", filterMale);
 document.getElementById("btn-gender-unknown").addEventListener("click", filterGenderUnknown);
@@ -45,7 +44,7 @@ function buildHtml(itens) {
 function searchPersons() {
   let search = input.value.toUpperCase();
   let name = window.data.getPerson(data, search);
-  return buildHtml (name);
+  return buildHtml(name);
 }
 
 function filterFemale() {
