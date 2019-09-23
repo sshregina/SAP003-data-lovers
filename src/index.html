@@ -10,10 +10,13 @@
 
 <body>
   <header>
-    <h1 class="titulo">Rick and Morty</h1>
+    <h1 class="title">Rick and Morty</h1>
   </header>
   <textarea rows = "5" class="text" id="input-person" placeholder="Digite aqui o nome do personagem"></textarea>
   <div class="actions">
+    <textarea rows="1" class="text" id="iput-persons" placeholder="Pesquise seu personagem pelo nome"></textarea>
+  </div>
+  <div class="actions" class="fixed">
     <button id="btn-gender-fem" class="btn">Mulher</button>
     <button id="btn-gender-male" class="btn">Homem</button>
     <button id="btn-gender-unknown" class="btn">Gênero Desconhecido</button>
@@ -21,12 +24,19 @@
     <button id="btn-status-dead" class="btn">Personagens mortos</button>
     <button id="btn-status-unknown" class="btn">Status Desconhecido</button>
     <button id="btn-specie-Human" class="btn">Espécie Humano</button>
+    <button id="btn-specie-Humanoid" class="btn">Espécie Humanoide</button>
     <button id="btn-specie-Alien" class="btn">Espécie Alien</button>
-    <button id="btn-order-az" class="btn">Nomes de A-Z </button>
-    <button id="btn-order-za" class="btn">Nomes de Z-A </button>
-
+    <button id="btn-order-az" class="btn">Nomes A-Z</button>
+    <button id="btn-order-za" class="btn">Nomes Z-A</button>
   </div>
+<<<<<<< HEAD
   <div id="lista" class="card__container"></div>
+=======
+  <main class="scroll">
+    <div id="list" class="card__container"></div>
+  </main>
+  <!--<script src="data/rickandmorty/rickandmorty.js"></script> -->
+>>>>>>> 7c1f0d67af685f38565999302f9eeed956b12c1e
   <script src="data/rickandmorty/rickandmorty_placeholder.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>

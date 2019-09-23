@@ -1,4 +1,5 @@
 const data = RICKANDMORTY.results;
+
 const tela = document.getElementById("lista");
 const input = document.getElementById("input-person")
 
@@ -10,8 +11,10 @@ document.getElementById("btn-status-alive").addEventListener("click", filterAliv
 document.getElementById("btn-status-dead").addEventListener("click", filterDead);
 document.getElementById("btn-status-unknown").addEventListener("click", filterStatusUnknown);
 document.getElementById("btn-specie-Human").addEventListener("click", filterSpecieHuman);
+document.getElementById("btn-specie-Humanoid").addEventListener("click", filterSpecieHumanoid);
 document.getElementById("btn-specie-Alien").addEventListener("click", filterSpecieAlien);
-document.getElementById("btn- A-Z").addEventListener("click", filterNamesAZ)
+document.getElementById("btn-order-az").addEventListener("click", allNameAtoZ);
+document.getElementById("btn-order-za").addEventListener("click", allNameZtoA);
 
 function buildHtml(itens) {
   let html = "";
@@ -34,7 +37,7 @@ function buildHtml(itens) {
           </div>
         
       </div>
-    </div>g
+  </div>
   `);
   tela.innerHTML = html;
 }
@@ -75,6 +78,10 @@ function filterSpecieHuman() {
 
 function filterSpecieAlien() {
   buildHtml(window.data.getValue(data, "species", "Alien"));
+}
+
+function filterSpecieHumanoid() {
+  buildHtml(window.data.getValue(data, "species", "Humanoid"));
 }
 
 function allNameAtoZ() {

@@ -73,9 +73,10 @@
 body {
     background: url(imagens/background.png) no-repeat center center fixed;
     background-size: cover;
+    font-family: 'Lexend Mega', sans-serif;
 }
 
-.titulo{
+.title{
     font-family: 'FontR&M';
     color: #02b1c8;
     font-size: 85px;
@@ -83,19 +84,33 @@ body {
     text-shadow: 0.02em 0.02em 0.02em #7ffa67,
                  -0.02em -0.02em 0.02em #7ffa67,
                  0 0 0.2em #7ffa67;
+    margin: 30px;
 }
 
 .actions {
     text-align: center;
 }
 
+.text {
+    border: 2px solid #02b1c8;
+    width: 400px;
+    border-radius: 2px;
+    resize: horizontal;
+    font-size: 20px;
+    font-family: 'Lexend Mega', sans-serif;
+}
+
+.fixed {
+    position: fixed;
+}
+
 .btn {
     background-color: black;
     font-size: 18px;
     color:#7ffa67;
-    padding: 18px 28px;
-    border-radius: 5px;
-    border: 0px solid;
+    padding: 12px 20px;
+    border-radius: 2px;
+    border: 1px solid #7ffa67;
     cursor: pointer;
     font-weight: bold;
     -webkit-transition: all 300ms linear;
@@ -103,12 +118,51 @@ body {
     -ms-transition: all 300ms linear;
     -o-transition: all 300ms linear;
     transition: all 300ms linear;
-    margin: 15px;
+    margin: 10px;
 }
 
 button:hover {
     background: #7ffa67; 
     color: black;
+    border: 1px solid black;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card {
+    background-color: #7ffa67;
+    display: inline-block;
+    padding: 15px;
+    margin-bottom: 15px;
+    width: 300px;
+    height: 350px;
+    border: 5px groove black;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+
+.card-front {
+    background-color: #7ffa67;
+    text-align: center;
+    font-size: 20px;
 }
 
 .text {
