@@ -1,7 +1,7 @@
 const data = RICKANDMORTY.results;
 
 const tela = document.getElementById("lista");
-const input = document.getElementById("input-person")
+const input = document.getElementById("input-persons");
 
 input.addEventListener("keyup", searchPersons);
 document.getElementById("btn-gender-fem").addEventListener("click", filterFemale);
@@ -41,10 +41,10 @@ function buildHtml(itens) {
   tela.innerHTML = html;
 }
 
-function searchPersons (){
-  let search = input.valeu.toUpperCase();
-  let name = window.data.getPerson(data,search)
-  return buildHtml (name)
+function searchPersons() {
+  let search = input.value.toUpperCase();
+  let name = window.data.getPerson(data, search);
+  return buildHtml (name);
 }
 
 function filterFemale() {
