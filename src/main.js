@@ -2,8 +2,7 @@ const data = RICKANDMORTY.results;
 const tela = document.getElementById("lista");
 const input = document.getElementById("input-person")
 
-input.addEventListener("keyup",searchPersons)
-
+input.addEventListener("keyup",searchPersons);
 document.getElementById("btn-gender-fem").addEventListener("click", filterFemale);
 document.getElementById("btn-gender-male").addEventListener("click", filterMale);
 document.getElementById("btn-gender-unknown").addEventListener("click", filterGenderUnknown);
@@ -17,22 +16,23 @@ document.getElementById("btn- A-Z").addEventListener("click", filterNamesAZ)
 function buildHtml(itens) {
   let html = "";
   itens.forEach((item) => html += `
-  <div class="card">
-    <div class= "card-inner">
-      <div class= "card-front">
-      <img src="${item.image}">
-      <h3>Nome: ${item.image}</h3>
-    </div>
-      <div class="card-back">
-        <ul class="card__list">
-         <li>Nome: <strong>${item.name}</strong></li>
-         <li>Status: <strong>${item.status}</strong></li>
-         <li>Espécie: <strong>${item.species}</strong></li>
-         <li>Gênero: <strong>${item.gender}</strong></li>
-         <li>Origem: <strong>${item.origin.name}</strong></li>
-         <li>Localização: <strong>${item.location.name}</strong></li>
-         </ul>
-       </div>
+    <div class="card">
+      <div class= "card-inner">
+        <div class= "card-front">
+          <img src="${item.image}">
+          <h3>Nome: ${item.name}</h3>
+        </div>
+          <div class="card-back">
+            <ul class="card__list">
+             <li>Nome: <strong>${item.name}</strong></li>
+             <li>Status: <strong>${item.status}</strong></li>
+             <li>Espécie: <strong>${item.species}</strong></li>
+             <li>Gênero: <strong>${item.gender}</strong></li>
+             <li>Origem: <strong>${item.origin.name}</strong></li>
+             <li>Localização: <strong>${item.location.name}</strong></li>
+            </ul>
+          </div>
+        
       </div>
     </div>g
   `);
@@ -40,7 +40,7 @@ function buildHtml(itens) {
 }
 
 function searchPersons (){
-  let search = input.valeu.toUpperCase();
+  let search = input.value.toUpperCase();
   let name = window.data.getPerson(data,search)
   return buildHtml (name)
 }
