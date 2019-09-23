@@ -17,9 +17,9 @@ document.getElementById("btn-specie-Alien").addEventListener("click", filterSpec
 document.getElementById("btn-order-az").addEventListener("click", allNameAtoZ);
 document.getElementById("btn-order-za").addEventListener("click", allNameZtoA);
 
-function buildHtml(itens) {
+function buildHtml(obj) {
   let html = "";
-  itens.forEach((item) => html += `
+  obj.items.forEach((item) => html += `
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
@@ -39,7 +39,13 @@ function buildHtml(itens) {
       </div>
   </div>
   `);
-  tela.innerHTML = html;
+  html += ` 
+  <div>
+    
+  <p> Seu percentual é <strong>${obj.perc}%</strong></p>
+
+  </div>`
+  tela.innerHTML = html ;
 }
 
 function searchPersons() {
