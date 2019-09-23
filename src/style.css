@@ -165,8 +165,13 @@ button:hover {
     font-size: 20px;
 }
 
-.text {
-    
+.card-back {
+    background-color: black;
+    transform: rotateY(180deg);
+    text-align: center;
+    color:#7ffa67;
+    position: absolute;
+    font-size: 20px;
 }
 
 
