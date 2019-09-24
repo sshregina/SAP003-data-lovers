@@ -1,6 +1,7 @@
 const data = RICKANDMORTY.results;
 
-const tela = document.getElementById("lista");
+const myDiv = document.getElementById("perc");
+const tela = document.getElementById("list");
 const input = document.getElementById("input-persons");
 
 input.addEventListener("keyup", searchPersons);
@@ -16,9 +17,7 @@ document.getElementById("btn-specie-Alien").addEventListener("click", filterSpec
 document.getElementById("btn-order-az").addEventListener("click", allNameAtoZ);
 document.getElementById("btn-order-za").addEventListener("click", allNameZtoA);
 
-function buildHtml(obj) {
-  console.log(obj);
-  
+function buildHtmlPerc(obj) {
   let html = "";
   obj.items.forEach((item) => html += `
   <div class="card">
@@ -40,59 +39,81 @@ function buildHtml(obj) {
       </div>
   </div>
   `);
-  const minhaDiv = document.getElementById("xuxu")
-  minhaDiv.innerHTML =   `A porcentagem de personagens com essa características é ${obj.perc}%`
-  
+  myDiv.innerHTML = `A porcentagem de personagens com essas características é ${obj.perc}%`;
+  tela.innerHTML = html ;
+}
+
+function buildHtml(itens) {
+  let html = "";
+  itens.items.forEach((item) => html += `
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="${item.image}">
+        <p>Nome: <strong>${item.name}</strong></p>
+      </div>
+        <div class="card-back">
+          <ul class="card__list">
+            <li>Nome: <strong>${item.name}</strong></li>
+            <li>Status: <strong>${item.status}</strong></li>
+            <li>Espécie: <strong>${item.species}</strong></li>
+            <li>Gênero: <strong>${item.gender}</strong></li>
+            <li>Origem: <strong>${item.origin.name}</strong></li>
+            <li>Localização: <strong>${item.location.name}</strong></li>
+          </ul>
+        </div>
+      </div>
+  </div>
+  `);  
   tela.innerHTML = html ;
 }
 
 function searchPersons() {
   let search = input.value.toUpperCase();
-  let name = {items: window.data.getPerson(data, search)};
-    
+  let name = window.data.getPerson(data, search);
   return buildHtml(name);
 }
 
 function filterFemale() {
-  buildHtml(window.data.getValue(data, "gender", "Female"));
+  buildHtmlPerc(window.data.getValue(data, "gender", "Female"));
 }
 
 function filterMale() {
-  buildHtml(window.data.getValue(data, "gender", "Male"));
+  buildHtmlPerc(window.data.getValue(data, "gender", "Male"));
 }
 
 function filterGenderUnknown() {
-  buildHtml(window.data.getValue(data, "gender", "unknown"));
+  buildHtmlPerc(window.data.getValue(data, "gender", "unknown"));
 }
 
 function filterDead() {
-  buildHtml(window.data.getValue(data, "status", "Dead"));
+  buildHtmlPerc(window.data.getValue(data, "status", "Dead"));
 }
 
 function filterAlive() {
-  buildHtml(window.data.getValue(data, "status", "Alive"));
+  buildHtmlPerc(window.data.getValue(data, "status", "Alive"));
 }
 
 function filterStatusUnknown() {
-  buildHtml(window.data.getValue(data, "status", "unknown"));
+  buildHtmlPerc(window.data.getValue(data, "status", "unknown"));
 }
 
 function filterSpecieHuman() {
-  buildHtml(window.data.getValue(data, "species", "Human"));
+  buildHtmlPerc(window.data.getValue(data, "species", "Human"));
 }
 
 function filterSpecieAlien() {
-  buildHtml(window.data.getValue(data, "species", "Alien"));
+  builHtmlPerc(window.data.getValue(data, "species", "Alien"));
 }
 
 function filterSpecieHumanoid() {
-  buildHtml(window.data.getValue(data, "species", "Humanoid"));
+  builHtmlPerc(window.data.getValue(data, "species", "Humanoid"));
 }
 
 function allNameAtoZ() {
-  buildHtml({items: window.data.getAllName(data, "A-Z")});
+  buildHtml(window.data.getAllName(data, "A-Z"));
 }
 
 function allNameZtoA() {
-  buildHtml ({items: window.data.getAllName(data, "Z-A")});
+  buildHtml(window.data.getAllName(data, "Z-A"));
 }
