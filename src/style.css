@@ -1,10 +1,8 @@
 .info{
-    position: absolute;
-    top: 400px;
     font-size: 30px;
     font-family: 'FontR&M';
-    src: url('fontes/FontR&M.ttf')  format('truetype');
-    color: #02b1c8; 
+    color: #02b1c8;
+    text-align: center; 
 
 }
 
