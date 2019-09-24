@@ -17,6 +17,8 @@ document.getElementById("btn-order-az").addEventListener("click", allNameAtoZ);
 document.getElementById("btn-order-za").addEventListener("click", allNameZtoA);
 
 function buildHtml(obj) {
+  console.log(obj);
+  
   let html = "";
   obj.items.forEach((item) => html += `
   <div class="card">
@@ -39,17 +41,18 @@ function buildHtml(obj) {
   </div>
   `);
   html += ` 
-  <div>
+  <div class="info">
     
-  <p> Seu percentual é <strong>${obj.perc}%</strong></p>
+  <p> A porcentagem de personagens com essa características é <strong>${obj.perc}%</strong></p>
 
-  </div>`
+  </div>`;
   tela.innerHTML = html ;
 }
 
 function searchPersons() {
   let search = input.value.toUpperCase();
-  let name = window.data.getPerson(data, search);
+  let name = {items: window.data.getPerson(data, search)}
+    
   return buildHtml(name);
 }
 
@@ -90,9 +93,9 @@ function filterSpecieHumanoid() {
 }
 
 function allNameAtoZ() {
-  buildHtml(window.data.getAllName(data, "A-Z"));
+  buildHtml({items:window.data.getAllName(data, "A-Z")});
 }
 
 function allNameZtoA() {
-  buildHtml(window.data.getAllName(data, "Z-A"));
+  buildHtml ({items: window.data.getAllName(data, "Z-A")});
 }

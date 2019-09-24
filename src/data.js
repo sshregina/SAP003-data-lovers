@@ -1,5 +1,5 @@
 function getValue (arr, key, value) {
-  let filterArr = arr.filter( persona => persona[key] === value );
+  const filterArr = arr.filter( persona => persona[key] === value );
 
   return {
     items: filterArr,
@@ -18,13 +18,10 @@ function getAllName(data, name) {
   return data.sort((a, b) => a.name > b.name ? -1 : 1);
 }
 
-function calcPercentual (arr,filterArr){
-  let porcentagem = (filterArr.length *100)/arr.length;
-  return Math.round(porcentagem * 100) / 100
+function calcPercentual (arr, filterArr) {
+  const porcentagem = (filterArr.length *100)/arr.length;
+  return Math.round(porcentagem * 100) / 100;
 }
-
-
-
 
 window.data = {
   getValue,

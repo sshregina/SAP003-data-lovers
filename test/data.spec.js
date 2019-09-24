@@ -25,7 +25,7 @@ describe("getValue", () => {
     const resultado = window.data.getValue(personagens, "gender", "Female");
 
     // espero que, alguma coisa
-    expect(resultado).toEqual([
+    expect(resultado).toEqual({"items":[
       {"id": 3, "name": "Summer Smith", "status": "Alive", "species": "Human", "type": "", "gender": "Female"}, 
       {"id": 32, "name": "Bearded Lady", "status": "Dead", "species": "Alien", "type": "Parasite", "gender": "Female"},
       {"id": 87, "name": "Cynthia", "status": "Dead", "species": "Alien", "type": "Zigerion", "gender": "Female"}
