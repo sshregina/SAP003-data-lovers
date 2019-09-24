@@ -40,18 +40,15 @@ function buildHtml(obj) {
       </div>
   </div>
   `);
-  html += ` 
-  <div class="info">
-    
-  <p> A porcentagem de personagens com essa características é <strong>${obj.perc}%</strong></p>
-
-  </div>`;
+  const minhaDiv = document.getElementById("xuxu")
+  minhaDiv.innerHTML =   `A porcentagem de personagens com essa características é ${obj.perc}%`
+  
   tela.innerHTML = html ;
 }
 
 function searchPersons() {
   let search = input.value.toUpperCase();
-  let name = {items: window.data.getPerson(data, search)}
+  let name = {items: window.data.getPerson(data, search)};
     
   return buildHtml(name);
 }
@@ -93,7 +90,7 @@ function filterSpecieHumanoid() {
 }
 
 function allNameAtoZ() {
-  buildHtml({items:window.data.getAllName(data, "A-Z")});
+  buildHtml({items: window.data.getAllName(data, "A-Z")});
 }
 
 function allNameZtoA() {
