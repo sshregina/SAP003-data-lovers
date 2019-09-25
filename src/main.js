@@ -1,6 +1,6 @@
 const data = RICKANDMORTY.results;
 
-const tela = document.getElementById("lista");
+const tela = document.getElementById("list");
 const input = document.getElementById("input-persons");
 
 input.addEventListener("keyup", searchPersons);
@@ -40,8 +40,8 @@ function buildHtml(obj) {
       </div>
   </div>
   `);
-  const minhaDiv = document.getElementById("xuxu")
-  minhaDiv.innerHTML =   `A porcentagem de personagens com essa características é ${obj.perc}%`
+  const minhaDiv = document.getElementById("information");
+  minhaDiv.innerHTML = `A porcentagem de personagens com essa características é ${obj.perc}%`;
   
   tela.innerHTML = html ;
 }
