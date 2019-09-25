@@ -2,7 +2,7 @@ function getValue (arr, key, value) {
   const filterArr = arr.filter( persona => persona[key] === value );
 
   return {
-    items: filterArr,
+    itens: filterArr,
     perc: calcPercentual (arr, filterArr)
   };
 }
