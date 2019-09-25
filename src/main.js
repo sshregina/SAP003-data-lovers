@@ -1,5 +1,6 @@
 const data = RICKANDMORTY.results;
 
+const myDiv = document.getElementById("perc");
 const tela = document.getElementById("list");
 const input = document.getElementById("input-persons");
 
@@ -16,11 +17,9 @@ document.getElementById("btn-specie-Alien").addEventListener("click", filterSpec
 document.getElementById("btn-order-az").addEventListener("click", allNameAtoZ);
 document.getElementById("btn-order-za").addEventListener("click", allNameZtoA);
 
-function buildHtml(obj) {
-  console.log(obj);
-  
+function buildHtmlPerc(obj) {
   let html = "";
-  obj.items.forEach((item) => html += `
+  obj.itens.forEach((item) => html += `
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
@@ -40,59 +39,68 @@ function buildHtml(obj) {
       </div>
   </div>
   `);
-  const minhaDiv = document.getElementById("information");
-  minhaDiv.innerHTML = `A porcentagem de personagens com essa características é ${obj.perc}%`;
-  
+  myDiv.innerHTML = `${obj.perc}% dos personagens possuem essas características.`;
   tela.innerHTML = html ;
 }
 
 function searchPersons() {
   let search = input.value.toUpperCase();
-  let name = {items: window.data.getPerson(data, search)};
-    
-  return buildHtml(name);
+  let name = {"itens": window.data.getPerson(data, search)};
+  myDiv.classList.add("invisible");
+  return buildHtmlPerc(name);
 }
 
 function filterFemale() {
-  buildHtml(window.data.getValue(data, "gender", "Female"));
+  myDiv.classList.remove("invisible");
+  buildHtmlPerc(window.data.getValue(data, "gender", "Female"));
 }
 
 function filterMale() {
-  buildHtml(window.data.getValue(data, "gender", "Male"));
+  myDiv.classList.remove("invisible");
+  buildHtmlPerc(window.data.getValue(data, "gender", "Male"));
 }
 
 function filterGenderUnknown() {
-  buildHtml(window.data.getValue(data, "gender", "unknown"));
+  myDiv.classList.remove("invisible");
+  buildHtmlPerc(window.data.getValue(data, "gender", "unknown"));
 }
 
 function filterDead() {
-  buildHtml(window.data.getValue(data, "status", "Dead"));
+  myDiv.classList.remove("invisible");
+  buildHtmlPerc(window.data.getValue(data, "status", "Dead"));
 }
 
 function filterAlive() {
-  buildHtml(window.data.getValue(data, "status", "Alive"));
+  myDiv.classList.remove("invisible");
+  buildHtmlPerc(window.data.getValue(data, "status", "Alive"));
 }
 
 function filterStatusUnknown() {
-  buildHtml(window.data.getValue(data, "status", "unknown"));
+  myDiv.classList.remove("invisible");
+  buildHtmlPerc(window.data.getValue(data, "status", "unknown"));
 }
 
 function filterSpecieHuman() {
-  buildHtml(window.data.getValue(data, "species", "Human"));
+  myDiv.classList.remove("invisible");
+  buildHtmlPerc(window.data.getValue(data, "species", "Human"));
 }
 
 function filterSpecieAlien() {
-  buildHtml(window.data.getValue(data, "species", "Alien"));
+  myDiv.classList.remove("invisible");
+  buildHtmlPerc(window.data.getValue(data, "species", "Alien"));
 }
 
 function filterSpecieHumanoid() {
-  buildHtml(window.data.getValue(data, "species", "Humanoid"));
+  myDiv.classList.remove("invisible");
+  buildHtmlPerc(window.data.getValue(data, "species", "Humanoid"));
 }
 
 function allNameAtoZ() {
-  buildHtml({items: window.data.getAllName(data, "A-Z")});
+  myDiv.classList.add("invisible");
+  buildHtmlPerc({"itens": window.data.getAllName(data, "A-Z")});
 }
 
 function allNameZtoA() {
-  buildHtml ({items: window.data.getAllName(data, "Z-A")});
+  myDiv.classList.add("invisible");
+  buildHtmlPerc({"itens": window.data.getAllName(data, "Z-A")});
 }
