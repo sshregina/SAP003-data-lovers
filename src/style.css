@@ -65,6 +65,10 @@ button:hover {
     background-color: black
 }
 
+.invisible {
+    display: none;
+}
+
 .card:hover .card-inner {
     transform: rotateY(180deg);
 }
