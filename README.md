@@ -18,8 +18,9 @@ Criamos duas protopersonas para dar partida às necessidades mais específicas d
 
 São elas:
 
-![(/src/imagem/persona1.jpg)]
-![(/src/imagem/persona2.jpg)]
+![](/src/imagem/persona1.jpg)
+
+![](/src/imagem/persona2.jpg)
 
 ## 3. Funcionalidades - História do Usuário
 
@@ -61,6 +62,6 @@ testes e como os resolveu na proposta final.
 
 ## 6. Ferramentas Utilizadas 
 
-Vanilla JS
-HTML 5
-CSS
+* Vanilla JS
+* HTML 5
+* CSS
