@@ -18,9 +18,9 @@ Criamos duas protopersonas para dar partida às necessidades mais específicas d
 
 São elas:
 
-![](/src/imagem/persona1.jpg)
+![](/src/imagens/persona1.jpg)
 
-![](/src/imagem/persona2.jpg)
+![](/src/imagens/persona2.jpg)
 
 ## 3. Funcionalidades - História do Usuário
 
