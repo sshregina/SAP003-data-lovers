@@ -103,3 +103,18 @@ describe("getAllName", () => {
     ]);
   });
 });
+
+describe("calcPercentual", () => {
+  it("is a function", () => {
+    expect(typeof window.data.getAllName).toBe("function");
+  });
+
+  it("returns `calcPercentual`", () => {
+
+    // quando alguma coisa acontecer
+    const resultado = window.data.calcPercentual(personagens, "Male");
+
+    // espero que, alguma coisa
+    expect(resultado).toEqual(36.36);
+  });
+});
