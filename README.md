@@ -51,7 +51,7 @@ Definições de pronto:
 
 Este foi o primeiro protótipo.
 
-![](/src/imagens/prototipo.jpg)
+![](/src/imagens/prototipo.png)
 
 Protótipo utilizando a ferramenta Marvel : https://marvelapp.com/4g50b82
 
