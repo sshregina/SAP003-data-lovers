@@ -38,11 +38,8 @@ História 2
 
 O segundo filtro, ou história, foi responsável por filtrar o banco de dados e trazer em cards as informações destes separadas por vivo, morto ou status desconhecido. 
 
-* Todos os filtros possuem um parametro que permite o usuário saber em porcentagem  corresponde a determinado percentual 
+* Todos os filtros possuem um parametro que permite o usuário saber em porcentagem quantos personagens dentre todos que aparecem na animação possuem determinada característica.  
 
-Definições de pronto:
-
-* 
 ## 4. Protótipo de baixa fidelidade
 
 * A partir das protopersonas e do banco de dados desenvolvemos um layout que acreditamso ser ideal para atender as requisições do usuário.
@@ -55,18 +52,37 @@ Este foi o primeiro protótipo.
 
 Protótipo utilizando a ferramenta Marvel : https://marvelapp.com/4g50b82
 
+![](/src/imagens/prototipo2.png)
+
+
 ## 5. Teste e feedbacks de usabilidade
 
-Os critérios considerados para que tenha terminado este projeto são:
+O protótipo 1 foi testado com potenciais usuários a partir das tarefas:
 
+Ao clique de um botão filtrar o personagem de acordo com as características pré habilitadas 
 
-#### Testes de usabilidade
+Perfil dos potenciais usuários que testaram:
 
-Durante o desafio você deverá fazer testes de usabilidade com usuários
-diferentes, e com base nos resultados desses testes, iterar seus desenhos de
-interface. Conte-nos quais problemas de usabilidade você detectou através dos
-testes e como os resolveu na proposta final.
+Mulher, 38 anos, desconhecia os personagens
 
+Homem, 16 anos, assistiu todos os episódios da série
+
+Homem, 22 anos, já teve acesso e assitiu alguns episódios 
+
+Mulher, 30 anos, assiste a série a pouco tempo
+
+Mulher, 17 anos, só assistiu a três episódios
+
+Resultados do teste com protótipo 1:
+
+Layout foi considerado adequado;
+
+Alguns usuários acreditaram que o layout poderia ser considerado um pouco poluído pelo excesso de botões apresentados. 
+
+Todos os usuários demonstraram gostar da parte que apresenta o percentual de personagens com as características escolhidas. 
+
+Reorganização do protótipo:
+Devido ao feedback recebido nos testes de usabilidade, foram refatorados os botões compactandos estes na forma de selects mantendo a funcionalidade anterior aprovada pelos usuários. 
 ## 6. Ferramentas Utilizadas 
 
 * Vanilla JS
