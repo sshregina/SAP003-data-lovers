@@ -40,6 +40,9 @@ O segundo filtro, ou história, foi responsável por filtrar o banco de dados e 
 
 * Todos os filtros possuem um parametro que permite o usuário saber em porcentagem  corresponde a determinado percentual 
 
+Definições de pronto:
+
+* 
 ## 4. Protótipo de baixa fidelidade
 
 * A partir das protopersonas e do banco de dados desenvolvemos um layout que acreditamso ser ideal para atender as requisições do usuário.
