@@ -7,7 +7,6 @@ const selectGender = document.getElementById("select-gender");
 const selectSpecies = document.getElementById("select-species");
 const selectStatus = document.getElementById("select-status");
 
-
 input.addEventListener("keyup", searchPersons);
 document.getElementById("btn-order-az").addEventListener("click", allNameAtoZ);
 document.getElementById("btn-order-za").addEventListener("click", allNameZtoA);
@@ -59,7 +58,7 @@ function getValueFromSelect(HTMLSelect) {
 
 function searchPersons() {
   let search = input.value.toUpperCase();
-  let name = window.db.getPerson(data, search);
+  let name = {"itens": window.db.getPerson(data, search)};
   perc.classList.add("invisible");
   return buildHtmlPerc(name);
 }
@@ -70,6 +69,6 @@ function allNameAtoZ() {
 }
 
 function allNameZtoA() {
-  // perc.classList.add("invisible");
-  buildHtmlPerc(window.db.getAllName(data, "Z-A"));
+  perc.classList.add("invisible");
+  buildHtmlPerc({"itens": window.db.getAllName(data, "Z-A")});
 }
