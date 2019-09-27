@@ -52,6 +52,9 @@ Este foi o primeiro protótipo.
 
 Protótipo utilizando a ferramenta Marvel : https://marvelapp.com/4g50b82
 
+![](/src/imagens/prototipo2.png)
+
+
 ## 5. Teste e feedbacks de usabilidade
 
 O protótipo 1 foi testado com potenciais usuários a partir das tarefas:
