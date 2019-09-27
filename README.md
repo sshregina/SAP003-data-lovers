@@ -49,7 +49,11 @@ Definições de pronto:
 
 * Para criar um dashboard, precisamos de cards para mostrar as informações de maneira clara e campos para o usuário interagir com os dados (inputs - botões - campos para digitação).
 
-Esses foram os primeiros rascunhos, e na última imagem o resultado unindo as ideias mais relevantes.
+Este foi o primeiro protótipo.
+
+![](/src/imagens/prototipo.jpg)
+
+Protótipo utilizando a ferramenta Marvel : https://marvelapp.com/4g50b82
 
 ## 5. Teste e feedbacks de usabilidade
 
