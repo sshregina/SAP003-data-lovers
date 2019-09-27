@@ -16,13 +16,13 @@ const personagens = [
 
 describe("getValue", () => {
   it("is a function", () => {
-    expect(typeof window.data.getValue).toBe("function");
+    expect(typeof window.db.getValue).toBe("function");
   });
 
   it("returns `getValue`", () => {
 
     // quando alguma coisa acontecer
-    const resultado = window.data.getValue(personagens, "gender", "Female");
+    const resultado = window.db.getValue(personagens, "gender", "Female");
 
     // espero que, alguma coisa
     expect(resultado).toEqual({"itens": [
@@ -35,13 +35,13 @@ describe("getValue", () => {
 
 describe("getPerson", () => {
   it("is a function", () => {
-    expect(typeof window.data.getPerson).toBe("function");
+    expect(typeof window.db.getPerson).toBe("function");
   });
 
   it("returns `getPerson`", () => {
 
     // quando alguma coisa acontecer
-    const resultado = window.data.getPerson(personagens, "Rick Sanchez");
+    const resultado = window.db.getPerson(personagens, "Rick Sanchez");
 
     // espero que, alguma coisa
     expect(resultado).toEqual([
@@ -52,13 +52,13 @@ describe("getPerson", () => {
 
 describe("getAllName", () => {
   it("is a function", () => {
-    expect(typeof window.data.getAllName).toBe("function");
+    expect(typeof window.db.getAllName).toBe("function");
   });
 
   it("returns `getAllName`", () => {
 
     // quando alguma coisa acontecer
-    const resultado = window.data.getAllName(personagens, "A-Z");
+    const resultado = window.db.getAllName(personagens, "A-Z");
 
     // espero que, alguma coisa
     expect(resultado).toEqual([
@@ -79,13 +79,13 @@ describe("getAllName", () => {
 
 describe("getAllName", () => {
   it("is a function", () => {
-    expect(typeof window.data.getAllName).toBe("function");
+    expect(typeof window.db.getAllName).toBe("function");
   });
 
   it("returns `getAllName`", () => {
 
     // quando alguma coisa acontecer
-    const resultado = window.data.getAllName(personagens, "Z-A");
+    const resultado = window.db.getAllName(personagens, "Z-A");
 
     // espero que, alguma coisa
     expect(resultado).toEqual([
@@ -106,13 +106,13 @@ describe("getAllName", () => {
 
 describe("calcPercentual", () => {
   it("is a function", () => {
-    expect(typeof window.data.getAllName).toBe("function");
+    expect(typeof window.db.getAllName).toBe("function");
   });
 
   it("returns `calcPercentual`", () => {
 
     // quando alguma coisa acontecer
-    const resultado = window.data.calcPercentual(personagens, "Male");
+    const resultado = window.db.calcPercentual(personagens, "Male");
 
     // espero que, alguma coisa
     expect(resultado).toEqual(36.36);
