@@ -1,5 +1,5 @@
 function getValue (arr, key, value) {
-  const filterArr = arr.filter( persona => persona[key] === value );
+  const filterArr = arr.filter( item => item[key].toLowerCase() === value.toLowerCase());
 
   return {
     itens: filterArr,
@@ -23,7 +23,7 @@ function calcPercentual (arr, filterArr) {
   return Math.round(porcentagem * 100) / 100;
 }
 
-window.data = {
+window.db = {
   getValue,
   getAllName,
   getPerson,
